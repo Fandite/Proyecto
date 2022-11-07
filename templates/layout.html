@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/General.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transversal</title>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Contratacion
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="/puesto">Análisis de Puesto</a></li>
+              <li class="dropdown-item" onmouseover="Mostrar('Over')" onmouseout="Mostrar('Out')">
+                  Requisición
+                  <ul class="dropdown-menu dropdown-menu-dark" style="display: none;" id="MenuOculto">
+                    <li><a class="dropdown-item" href="/requisicion_agr">Nueva Requisición</a></li>
+                    <li><a class="dropdown-item" href="/requisicion">Pendiente por Autorización</a></li>
+                    <li><a class="dropdown-item" href="/req_autorizadas">Autorizadas</a></li>
+                  </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Catalogo
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="/area">Area</a></li>
+              <li><a class="dropdown-item" href="/carrera">Carrera</a></li>
+              <li><a class="dropdown-item" href="/escolaridad">Escolaridad</a></li>
+              <li><a class="dropdown-item" href="/estadoci">Estado Civíl</a></li>
+              <li><a class="dropdown-item" href="/grado">Grado de avance</a></li>
+              <li><a class="dropdown-item" href="/hab">Habilidades</a></li>
+              <li><a class="dropdown-item" href="/idioma">Idioma</a></li>
+              <li><a class="dropdown-item" href="/med">Medio de Publicidad</a></li>
+              <li><a class="dropdown-item" href="#">Documentos solicitados</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</head>
+
+<body style="color: #FFF;">
+
+  {% block content %}
+  {% endblock %}
+
+</body>
+<script>
+  function Mostrar(E) {
+    var menu = document.getElementById("MenuOculto");
+    if (E == "Over") {
+      menu.style.display = "block";
+    } else {
+      if (E == "Out") {
+        menu.style.display = "none";
+      }
+    }
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+  integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+  integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+</html>

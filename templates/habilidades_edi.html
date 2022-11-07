@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="../static/css/area.css">
+
+<div class="row row-area">
+    <div class="col">
+        <h1 class="titulo">Modificar Habiidad</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <form action="/upt_hab/{{hab.0}}" method="POST">
+        <div class="mb-3">
+            <label for="hab" class="form-label">Editar la hablidad</label>
+            <input type="text" class="form-control InH" id="hab" name="hab" value="{{hab.1}}">
+          </div>
+          <button type="submit" class="btn btnH">Modificar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

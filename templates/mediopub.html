@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="../static/css/area.css">
+
+<div class="row">
+    <div class="col">
+        <h1 class="titulo">Medios de Publicidad</h1>
+    </div>
+</div>
+<div class="row Rtab">
+    <div class="col">
+        <center>
+            <table class="table area">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col" colspan="2"><center><a href="/med_agr" class="btn btn-warning">Agregar nuevo medio de publicidad</a></center></th> 
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for i in medios %}
+                    <tr>
+                        <th scope="row">{{i.0}}</th>
+                        <td>{{i.1}}</td>
+                        <td class="Ops"><center><a href="/med_edi/{{i.0}}" class="btn btn-warning">Editar</a></center></td>
+                        <td class="Ops"><center><a href="/med_bor/{{i.0}}" class="btn btn-warning">Borrar</a></center></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </center>
+    </div>
+</div>
+{% endblock %}

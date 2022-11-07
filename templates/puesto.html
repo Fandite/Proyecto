@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="../static/css/PuestoCss.css">
+
+<div class="row">
+    <div class="col">
+        <center>
+            <h1 class="titulo">Puesto</h1>
+        </center>
+    </div>
+</div>
+<div class="row Rtab">
+    <div class="col">
+        <center>
+            <table class="table">
+                <thead>
+                    <tr class="Pcab">
+                        <th scope="col">#</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col" colspan="3">
+                            <center><a href="/puesto_agr" class="btn btnP">Agregar nuevo puesto</a></center>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for i in pue %}
+                    <tr>
+                        <th scope="row" class="Op5">{{i.0}}</th>
+                        <td class="Op5">{{i.1}}</td>
+                        <td class="Op5">
+                            <center><a href="/puesto_det/{{i.0}}" class="btn btnP">Detalle</a></center>
+                        </td>
+                        <td class="Op5">
+                            <center><a href="/puesto_edi/{{i.0}}" class="btn btnP">Editar</a></center>
+                        </td>
+                        <td class="Op5">
+                            <center><a href="/puesto_bor/{{i.0}}" class="btn btnP">Borrar</a></center>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </center>
+    </div>
+</div>
+<br>
+<br>
+<h1 class="titulo">
+    <center><strong>Detalle</strong></center>
+</h1>
+<br>
+<br>
+<form class="row g-10" action="/puesto_editar/" method="get">
+    <div class="col-md-6">
+        <label for="NomPuesto" class="form-label">Nombre de puesto</label>
+        <input type="text" class="form-control InP" name="NomPuesto" id="NomPuesto" value="{{D.3}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-6">
+        <label for="CodPuesto" class="form-label">Código de puesto</label>
+        <input type="text" class="form-control InP" name="CodPuesto" id="CodPuesto" value="{{D.1}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="idArea" class="form-label">Área de adscripción</label>
+        <input type="text" class="form-control InP" name="idArea" id="idArea" value="{{A.1}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="JefeSup" class="form-label">Puesto de jefe </label>
+        <input type="text" class="form-control InP" name="JefeSup" id="JefeSup" value="{{D.4}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-8">
+        <label for="Jornada" class="form-label">Jornada</label>
+        <input type="text" class="form-control InP" name="Jornada" id="Jornada" value="{{D.5}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="Remu" class="form-label">Remuneración mensual</label>
+        <input type="text" class="form-control InP" name="Remu" id="Remu" value="{{D.6}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="Presta" class="form-label">Prestaciones</label>
+        <input type="text" class="form-control InP" name="Presta" id="Presta" value="{{D.7}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="DescGral" class="form-label">Descripción general</label>
+        <input type="text" class="form-control InP" name="DescGral" id="DescGral" value="{{D.8}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="Funciones" class="form-label">Funciones</label>
+        <input type="text" class="form-control InP" name="Funciones" id="Funciones" value="{{D.9}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="Edad" class="form-label">Edad</label>
+        <input type="text" class="form-control InP" name="Edad" id="Edad" value="{{D.10}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="Sexo" class="form-label">Sexo</label>
+        <input type="text" class="form-control InP" name="Sexo" id="Sexo" value="{{D.11}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="idEC" class="form-label">Estado Civil</label>
+        <input type="text" class="form-control InP" name="idEC" id="idEC" value="{{EC.1}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="idEsco" class="form-label">Escolaridad</label>
+        <input type="text" class="form-control InP" name="idEsco" id="idEsco" value="{{E.1}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="idGrA" class="form-label">Grado de avance</label>
+        <input type="text" class="form-control InP" name="idGrA" id="idGrA" value="{{G.1}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="idCar" class="form-label">Carrera</label>
+        <input type="text" class="form-control InP" name="idCar" id="idCar" value="{{C.1}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="Exp" class="form-label">Experiencia</label>
+        <input type="text" class="form-control InP" name="Exp" id="Exp" value="{{D.16}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="Conocimiento" class="form-label">Conocimiento</label>
+        <input type="text" class="form-control InP" name="Conocimiento" id="Conocimiento" value="{{D.17}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="ManEquip" class="form-label">Manejo equipo</label>
+        <input type="text" class="form-control InP" name="ManEquip" id="ManEquip" value="{{D.18}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="ReqFis" class="form-label">Requisitos físicos</label>
+        <input type="text" class="form-control InP" name="ReqFis" id="ReqFis" value="{{D.19}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="ReqPsi" class="form-label">Requisitos psicológicos</label>
+        <input type="text" class="form-control InP" name="ReqPsi" id="ReqPsi" value="{{D.20}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="Resp" class="form-label">Responsabilidades</label>
+        <input type="text" class="form-control InP" name="Resp" id="Resp" value="{{D.21}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="ConTr" class="form-label">Condiciones de Trabajo</label>
+        <input type="text" class="form-control InP" name="ConTr" id="ConTr" value="{{D.22}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-6">
+        <label for="ConTr" class="form-label">Idiomas</label>
+        {% if I == [""] %}
+        <input type="text" class="form-control InP" name="ConTr" id="ConTr" value="NO REQUERIDAS" readonly="readonly"></input>
+        {% else %}
+        {% for c in I%}
+        <input type="text" class="form-control InP" name="ConTr" id="ConTr" value="{{c.1}}" readonly="readonly"></input>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div class="col-md-6">
+        <label for="ConTr" class="form-label">Habilidades</label>
+        {% if H == [""] %}
+        <input type="text" class="form-control InP" name="ConTr" id="ConTr" value="NO REQUERIDAS" readonly="readonly"></input>
+        {% else %}
+        {% for c in H %}
+        <input type="text" class="form-control InP" name="ConTr" id="ConTr" value="{{c.1}}" readonly="readonly"></input>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

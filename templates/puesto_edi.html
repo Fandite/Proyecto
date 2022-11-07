@@ -1,0 +1,245 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<body onload="DesabilitarIdi(), DesabilitarHab(), DesabilitarEC()">
+<h1 class="titulo">
+    <center><strong>Editar</strong></center>
+</h1>
+<br>
+<br>
+<!-- <> -->
+<form class="row g-10" action="/puesto_editarac/{{D.0}}" method="post">
+    <div class="col-md-6">
+        <label for="NomPuesto" class="form-label">Nombre de puesto</label>
+        <input type="text" class="form-control InP" name="NomPuesto" id="NomPuesto" value="{{D.3}}" required></input>
+    </div>
+    <div class="col-md-6">
+        <label for="CodPuesto" class="form-label">Código de puesto</label>
+        <input type="text" class="form-control InP" name="CodPuesto" id="CodPuesto" value="{{D.1}}" required></input>
+    </div>
+    <div class="col-md-12">
+        <label for="idArea" class="form-label">Área de adscripción</label>
+        <select class="form-select InP" name="idArea" id="idArea">
+            <option value="{{A.0}}" selected> {{A.1}}</option>
+            {% for i in area %}
+            <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-12">
+        <label for="JefeSup" class="form-label">Puesto de jefe </label>
+        <input type="text" class="form-control InP" name="JefeSup" id="JefeSup" value="{{D.4}}" required></input>
+    </div>
+    <div class="col-md-8">
+        <label for="Jornada" class="form-label">Jornada</label>
+        <input type="text" class="form-control InP" name="Jornada" id="Jornada" value="{{D.5}}" required></input>
+    </div>
+    <div class="col-md-4">
+        <label for="Remu" class="form-label">Remuneración mensual</label>
+        <input type="text" class="form-control InP" name="Remu" id="Remu" value="{{D.6}}" required></input>
+    </div>
+    <div class="col-md-12">
+        <label for="Presta" class="form-label">Prestaciones</label>
+        <input type="text" class="form-control InP" name="Presta" id="Presta" value="{{D.7}}" required></input>
+    </div>
+    <div class="col-md-12">
+        <label for="DescGral" class="form-label">Descripción general</label>
+        <input type="text" class="form-control InP" name="DescGral" id="DescGral" value="{{D.8}}" required></input>
+    </div>
+    <div class="col-md-12">
+        <label for="Funciones" class="form-label">Funciones</label>
+        <input type="text" class="form-control InP" name="Funciones" id="Funciones" value="{{D.9}}" required></input>
+    </div>
+    <div class="col-md-4">
+        <label for="Edad" class="form-label">Edad</label>
+        <input type="text" class="form-control InP" name="Edad" id="Edad" value="{{D.10}}" required></input>
+    </div>
+    <div class="col-md-4">
+        <label for="Sexo" class="form-label">Sexo</label>
+        <select class="form-select InP" name="Sexo" id="Sexo">
+            <option value="{{D.11}}" selected> {{D.11+"..."}} </option>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="Indistinto">Indistinto</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="idEC" class="form-label">Estado Civil</label>
+        <select class="form-select InP" name="idEC" id="idEC">
+            <option value="{{EC.0}}" selected> {{EC.1+"..."}} </option>
+            {% for i in ec %}
+            <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="idEsco" class="form-label">Escolaridad</label>
+        <select class="form-select InP" name="idEsco" id="idEsco" onchange="DesabilitarEC()">
+            <option value="{{E.0}}" selected>{{E.1+"..."}}</option>
+            {% for i in esco %}
+            <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+        </select>
+        <script>
+            function DesabilitarEC(){
+                var sihay = document.getElementById("idEsco").value;
+                if (sihay == 1){
+                    document.getElementById("idGrA").disabled=true;
+                    document.getElementById("idCar").disabled=true;
+                } else{
+            document.getElementById("idGrA").disabled=false;
+            document.getElementById("idCar").disabled=false;
+        }
+            }
+        </script>
+    </div>
+    <div class="col-md-4">
+        <label for="idGrA" class="form-label">Grado de avance</label>
+        <select class="form-select InP" name="idGrA" id="idGrA">
+            <option value="{{G.0}}" selected>{{G.1+"..."}}</option>
+            {% for i in grado %}
+            <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="idCar" class="form-label">Carrera</label>
+        <select class="form-select InP" name="idCar" id="idCar">
+            <option value="{{C.0}}" selected>{{C.1+"..."}}</option>
+            {% for i in carrera %}
+            <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-12">
+        <label for="Exp" class="form-label">Experiencia</label>
+        <input type="text" class="form-control InP" name="Exp" id="Exp" value="{{D.16}}" required></input>
+    </div>
+    <div class="col-md-12">
+        <label for="Conocimiento" class="form-label">Conocimiento</label>
+        <input type="text" class="form-control InP" name="Conocimiento" id="Conocimiento" value="{{D.17}}" required></input>
+    </div>
+    <div class="col-md-12">
+        <label for="ManEquip" class="form-label">Manejo equipo</label>
+        <input type="text" class="form-control InP" name="ManEquip" id="ManEquip" value="{{D.18}}" required></input>
+    </div>
+    <div class="col-md-12">
+        <label for="ReqFis" class="form-label">Requisitos físicos</label>
+        <input type="text" class="form-control InP" name="ReqFis" id="ReqFis" value="{{D.19}}" required></input>
+    </div>
+    <div class="col-md-12">
+        <label for="ReqPsi" class="form-label">Requisitos psicológicos</label>
+        <input type="text" class="form-control InP" name="ReqPsi" id="ReqPsi" value="{{D.20}}" required></input>
+    </div>
+    <div class="col-md-12">
+        <label for="Resp" class="form-label">Responsabilidades</label>
+        <input type="text" class="form-control InP" name="Resp" id="Resp" value="{{D.21}}" required></input>
+    </div>
+    <div class="col-md-12">
+        <label for="ConTr" class="form-label">Condiciones de Trabajo</label>
+        <input type="text" class="form-control InP" name="ConTr" id="ConTr" value="{{D.22}}" required></input>
+    </div>
+    <div class="col-md-6">
+        <h5>Idiomas</h5>
+        {% for i in idioma %}
+        {% if i in I and i.0!=1 %}
+        <div class="form-check">
+            <input class="form-check-input InPCh" type="checkbox" name="idi{{i.0}}" id="idi{{i.0}}" checked>
+            <label class="form-check-label" for="idi{{i.0}}">
+                {{i.1}}
+            </label>
+        </div>
+
+        {% elif i in I and i.0==1 %}
+        <div class="form-check">
+            <input class="form-check-input InPCh" type="checkbox" id="idi1" name="idi1" onchange="DesabilitarIdi()" checked>
+            <label class="form-check-label" for="idi1">NO REQUERIDAS</label>
+        </div>
+        {% else %}
+        {% if i.0!=1 %}
+        <div class="form-check">
+            <input class="form-check-input InPCh" type="checkbox" name="idi{{i.0}}" id="idi{{i.0}}">
+            <label class="form-check-label" for="idi{{i.0}}">
+                {{i.1}}
+            </label>
+        </div>
+        {% else %}
+        <div class="form-check">
+            <input class="form-check-input InPCh" type="checkbox" value="" id="idi1" name="idi1" onchange="DesabilitarIdi()">
+            <label class="form-check-label" for="idi1">NO REQUERIDAS</label>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
+    <script>
+        function DesabilitarIdi() {
+        {% for i in idioma %}
+            var checado = document.getElementById("idi1").checked;
+            if ({{i.0}}> 1 && checado) {
+            document.getElementById("idi{{i.0}}").disabled = true;
+            document.getElementById("idi{{i.0}}").checked = false;
+        }
+            else {
+            document.getElementById("idi{{i.0}}").disabled = false;
+        }
+        {% endfor %}
+    }
+    </script>
+    <div class="col-md-6">
+            <h5>Habilidades</h5>
+        {% for i in hab %}
+        {% if i in H and i.0!=1 %}
+        <div class="form-check">
+            <input class="form-check-input InPCh" type="checkbox" name="h{{i.0}}" id="h{{i.0}}" checked>
+            <label class="form-check-label" for="h{{i.0}}">
+                {{i.1}}
+            </label>
+        </div>
+        {% elif i in I and i.0==1 %}
+        <div class="form-check">
+            <input class="form-check-input InPCh" type="checkbox" value="" id="h1" name="h1" onchange="DesabilitarHab()" checked>
+            <label class="form-check-label" for="h1">NO REQUERIDAS</label>
+        </div>
+
+        {% else %}
+        {% if i.0!=1 %}
+        <div class="form-check">
+            <input class="form-check-input InPCh" type="checkbox" name="h{{i.0}}" id="h{{i.0}}">
+            <label class="form-check-label" for="h{{i.0}}">
+                {{i.1}}
+            </label>
+        </div>
+        {% else %}
+        <div class="form-check">
+            <input class="form-check-input InPCh" type="checkbox" value="" id="h1" name="h1" onchange="DesabilitarHab()">
+            <label class="form-check-label" for="h1">NO REQUERIDAS</label>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
+    <script>
+         function DesabilitarHab() {
+            {% for i in hab %}
+            var checado = document.getElementById("h1").checked;
+            if ({{i.0 }}> 1 && checado) {
+            document.getElementById("h{{i.0}}").disabled = true;
+            document.getElementById("h{{i.0}}").checked = false;
+        }
+                else {
+            document.getElementById("h{{i.0}}").disabled = false;
+        }
+        {% endfor %}
+    }
+    </script>
+    <div class="col-md-4">
+        <button type="submit" class="btn btnP">Editar</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

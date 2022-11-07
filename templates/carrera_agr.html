@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="../static/css/area.css">
+
+<div class="row row-area">
+    <div class="col">
+        <h1 class="titulo">Agregar nueva Carrera</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <form action="/inser_carrera" method="POST">
+        <div class="mb-3">
+            <label for="carrera" class="form-label">Agrega la Carrera</label>
+            <input type="text" class="form-control InC" id="carrera" name="carrera">
+          </div>
+          <button type="submit" class="btn btnC">Agregar nueva carrera</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,312 @@
+body{
+    background-image: url("/static/img/BG.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.Rtab{
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 20px;
+}
+.titulo {
+    text-align: center;
+    margin-top: 5%;
+    color: #FFF;
+}
+.row{
+    width:80%;
+    margin-left: 10%;
+}
+#Form2{
+    width: 100%;
+    margin-left:0%;
+}
+.Op3{
+    width: 33.3%;
+    border: 0px;
+    vertical-align: middle;
+}
+.Ops{
+    width: 25%;
+    border: 0px;
+    vertical-align: middle;
+}
+.Op5{
+    width: 20%;
+    border: 0px;
+    vertical-align: middle;
+}
+.table{
+    background: rgba(104, 104, 104, 0.589);
+    color: #FFF;
+    border-radius: 20px;
+}
+.Acab{
+    background-color: #FF5733;
+    vertical-align: middle;
+}
+.btnA{
+    background-color: #7E1701;
+    border-color: #7E1701;
+    color: #FFF;
+}
+.btnA:hover{
+    background-color: #CB2501;
+    border-color: #CB2501;
+    color: #FFF;
+}
+.btnA:active{
+    background-color: #CB2501;
+    border-color: #CB2501;
+}
+.InA{
+    border-color: #CB2501;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InA:focus{
+    border-color: #CB2501;
+    text-shadow: 0 0 30px #CB2501;
+    box-shadow: 0 0 15px #7E1701;
+    background-color: white;
+}
+.Ccab{
+    background-color: #D279EC;
+    vertical-align: middle;
+    color: #000;
+}
+.btnC{
+    background-color: #54006C;
+    border-color: #54006C;
+    color: #FFF;
+}
+.btnC:hover{
+    background-color: #C807FF;
+    border-color: #C807FF;
+    color: #FFF;
+}
+.btnC:active{
+    background-color: #C807FF;
+    border-color: #C807FF;
+}
+.InC{
+    border-color: #C807FF;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InC:focus{
+    border-color: #C807FF;
+    text-shadow: 0 0 30px #C807FF;
+    box-shadow: 0 0 15px #54006C;
+    background-color: white;
+}
+.Ecab{
+    background-color: #17EC82;
+    vertical-align: middle;
+    color: #000;
+}
+.btnE{
+    background-color: #006835;
+    border-color: #006835;
+    color: #FFF;
+}
+.btnE:hover{
+    background-color: #02B85F;
+    border-color: #02B85F;
+    color: #FFF;
+}
+.btnE:active{
+    background-color: #02B85F;
+    border-color: #02B85F;
+}
+.InE{
+    border-color: #019A4F;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InE:focus{
+    border-color: #019A4F;
+    text-shadow: 0 0 30px #019A4F;
+    box-shadow: 0 0 15px #006835;
+    background-color: white;
+}
+.ETcab{
+    background-color: #D00052;
+    vertical-align: middle;
+}
+.btnET{
+    background-color: #F83783;
+    border-color: #F83783;
+    color: #FFF;
+}
+.btnET:hover{
+    background-color: #74012E;
+    border-color: #74012E;
+    color: #FFF;
+}
+.btnET:active{
+    background-color: #74012E;
+    border-color: #74012E;
+}
+.InET{
+    border-color: #FF0271;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InET:focus{
+    border-color: #FF0271;
+    text-shadow: 0 0 30px #FF0271;
+    box-shadow: 0 0 15px #F83783;
+    background-color: white;
+}
+.GAcab{
+    background-color: #6C1AF2;
+    vertical-align: middle;
+}
+.btnGA{
+    background-color: #7A4DC3;
+    border-color: #7A4DC3;
+    color: #FFF;
+}
+.btnGA:hover{
+    background-color: #190140;
+    border-color: #190140;
+    color: #FFF;
+}
+.btnGA:active{
+    background-color: #190140;
+    border-color: #190140;
+}
+.InGA{
+    border-color: #4707B0;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InGA:focus{
+    border-color: #4707B0;
+    text-shadow: 0 0 30px #4707B0;
+    box-shadow: 0 0 15px #7A4DC3;
+    background-color: white;
+}
+.Hcab{
+    background-color: #1AC1F2;
+    vertical-align: middle;
+    color: #000;
+}
+.btnH{
+    background-color: #01485D;
+    border-color: #01485D;
+    color: #FFF;
+}
+.btnH:hover{
+    background-color: #0883A9;
+    border-color: #0883A9;
+    color: #FFF;
+}
+.btnH:active{
+    background-color: #0883A9;
+    border-color: #0883A9;
+}
+.InH{
+    border-color: #2594B4;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InH:focus{
+    border-color: #2594B4;
+    text-shadow: 0 0 30px #2594B4;
+    box-shadow: 0 0 15px #2EC7F3;
+    background-color: white;
+}
+.Icab{
+    background-color: #7FF000;
+    color: #000;
+    vertical-align: middle;
+}
+.btnI{
+    background-color: #3C7000;
+    border-color: #3C7000;
+    color: #FFF;
+}
+.btnI:hover{
+    background-color: #84BC45;
+    border-color: #84BC45;
+    color: #FFF;
+}
+.btnI:active{
+    background-color: #84BC45;
+    border-color: #84BC45;
+}
+.InI{
+    border-color: #75BF20;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InI:focus{
+    border-color: #75BF20;
+    text-shadow: 0 0 30px #3C7000;
+    box-shadow: 0 0 15px #84BC45;
+    background-color: white;
+}
+.Pcab{
+    background-color: #202020;
+    vertical-align: middle;
+    border-radius: 20px;
+}
+.btnP{
+    background-color: #3A3A3A;
+    border-color: #3A3A3A;
+    color: #FFF;
+}
+.btnP:hover{
+    background-color: #757575;
+    border-color: #757575;
+    color: #000;
+}
+.btnP:active{
+    background-color: #757575;
+    border-color: #757575;
+}
+.InP{
+    border-color: #202020;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InP:focus{
+    border-color: #202020;
+    text-shadow: 0 0 30px #F5F5F5;
+    box-shadow: 0 0 20px #d5d5d5;
+    background-color: white;
+}
+.InP:disabled{
+    border-color: #202020;
+    background-color: rgba(255, 255, 255, 0.211);
+    font-weight: 500;
+}
+.InPCh{
+    border-radius: 100% 100%;
+    border-color: #202020;
+    background-color: rgba(255, 255, 255, 0.541);
+}
+.InPCh:checked{
+    border-color: #202020;
+    border-radius: 100%;
+    background: url("/static/img/Verificado.png");
+    text-shadow: 0 0 7px #F5F5F5;
+    box-shadow: 0 0 5px #d5d5d5;
+}
+.InPCh:focus{
+    border-color: #202020;
+    text-shadow: 0 0 30px #F5F5F5;
+    box-shadow: 0 0 20px #d5d5d5;
+}
+.RPcab{
+    background-color: #FF0000;
+    vertical-align: middle;
+    border-radius: 20px;
+}
+.RAcab{
+    background-color: #0068FF;
+    vertical-align: middle;
+    border-radius: 20px;
+}

@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+    <div class="col">
+        <center>
+            <h1 class="titulo">Requisiciones Autorizadas</h1>
+        </center>
+    </div>
+</div>
+<div class="row Rtab">
+    <div class="col">
+        <center>
+            <table class="table">
+                <thead>
+                    <tr class="RAcab">
+                        <th scope="col">Folio</th>
+                        <th scope="col">Puesto</th>
+                        <th colspan="3" ></th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for i in dat %}
+                    {% if i.1 == 1 %}
+                    <tr>
+                        <th scope="row" class="Op3">{{i.2}}</th>
+                        <td class="Op3">{{i.3}}</td>
+                        <td class="Op3">
+                            <center><a href="/autori_det/{{i.0}}" class="btn btnP">Detalle</a></center>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </center>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<h1 class="titulo">
+    <center><strong>Detalle</strong></center>
+</h1>
+<br>
+<br>
+<form class="row g-3" action="/autori_det/" method="get">
+    <div class="col-md-3">
+        <label for="Folio" class="form-label">Folio</label>
+        <input type="text" class="form-control InR" name="Folio" id="Folio" value="{{Re.0}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-6">
+        <label for="idArea" class="form-label">Área de adscripción</label>
+        <input type="text" class="form-control InR" name="idArea" id="idArea" readonly="readonly" value="{{Are.0}}"></input>
+    </div>
+    <div class="col-md-3">
+        <label for="FechaE" class="form-label">Fecha de Elaboración</label>
+        <input type="date" class="form-control InR" name="FechaE" id="FechaE" value="{{Re.1}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="idPuesto" class="form-label">Puesto a cubrir</label>
+        <input type="text" class="form-control InR" name="idPuesto" id="idPuesto" value="{{Pu.0}}" readonly="readonly"></input>
+    </div><div class="col-md-12">
+        <label for="NomPueS" class="form-label">Nombre y puesto de quien solicita</label>
+        <input type="text" class="form-control InR" name="NomPueS" id="NomPueS" value="{{Re.2}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="FechaRec" class="form-label">Fecha de Reclutamiento</label>
+        <input type="date" class="form-control InR" name="FechaRec" id="FechaRec" value="{{Re.3}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="FechaIn" class="form-label">Fecha de Inicio Vacante</label>
+        <input type="date" class="form-control InR" name="FechaIn" id="FechaIn" value="{{Re.4}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="Tipo" class="form-label">Tipo de vacante </label>
+        <input type="text" class="form-control InR" name="Tipo" id="Tipo" value="{{Re.5}}" readonly="readonly"></input>
+    </div>
+    {% if Re.6 != "Otro" %}
+    <div class="col-md-12">
+        <label for="Folio" class="form-label">Vacante generada por:</label>
+        <input type="text" class="form-control InR" name="Folio" id="Folio" value="{{Re.6}}" readonly="readonly"></input>
+   </div>
+   {% else %}
+   <div class="col-md-12">
+        <label for="Folio" class="form-label">Vacante generada por:</label>
+        <input type="text" class="form-control InR" name="Folio" id="Folio" value="{{Re.6 + ': ' + Re.7}}" readonly="readonly"></input>
+    </div>
+    {% endif %}
+    <div class="col-md-6">
+        <label for="Revisada" class="form-label">Revisada por:</label>
+        <input type="text" class="form-control InR" name="Revisada" id="Revisada" value="{{Re.9}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-6">
+        <label for="Autorizada" class="form-label"> Autorizada por: </label>
+        <input type="text" class="form-control InR" name="Autorizada" id="Autorizada" value="{{Re.10}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="idArea" class="form-label">Área del puesto vacante</label>
+        <input type="text" class="form-control InR" name="idArea" id="idArea" value="{{Pu.1}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="JefeSup" class="form-label"> Nombre del Puesto del Jefe Superior </label>
+        <input type="text" class="form-control InR" name="JefeSup" id="JefeSup" value="{{Pu.2}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-8">
+        <label for="Jornada" class="form-label">Jornada</label>
+        <input type="text" class="form-control InR" name="Jornada" id="Jornada" value="{{Pu.3}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-4">
+        <label for="Remu" class="form-label">Remuneración mensual</label>
+        <input type="text" class="form-control InR" name="Remu" id="Remu" value="{{Pu.4}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="DescGral" class="form-label">Descripción general del Puesto</label>
+        <input type="text" class="form-control InR" name="DescGral" id="DescGral" value="{{Pu.5}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-12">
+        <label for="Funciones" class="form-label">Funciones</label>
+        <input type="text" class="form-control InR" name="Funciones" id="Funciones" value="{{Pu.6}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-3">
+        <label for="idEsco" class="form-label">Escolaridad</label>
+        <input type="text" class="form-control InR" name="idEsco" id="idEsco" value="{{Pu.7}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-3">
+        <label for="Edad" class="form-label">Edad</label>
+        <input type="text" class="form-control InR" name="Edad" id="Edad" value="{{Pu.8}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-3">
+        <label for="Sexo" class="form-label">Sexo</label>
+        <input type="text" class="form-control InR" name="Sexo" id="Sexo" value="{{Pu.9}}" readonly="readonly"></input>
+    </div>
+    <div class="col-md-3">
+        <label for="idEC" class="form-label">Estado Civil</label>
+        <input type="text" class="form-control InR" name="idEC" id="idEC" value="{{Pu.10}}" readonly="readonly"></input>
+    </div>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

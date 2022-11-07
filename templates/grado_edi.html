@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="../static/css/area.css">
+
+<div class="row row-area">
+    <div class="col">
+        <h1 class="titulo">Modificar grado de avance</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <form action="/upt_grado/{{grado.0}}" method="POST">
+        <div class="mb-3">
+            <label for="grado" class="form-label">Editar el grado de avance</label>
+            <input type="text" class="form-control InGA" id="grado" name="grado" value="{{grado.1}}">
+          </div>
+          <button type="submit" class="btn btnGA">Modificar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

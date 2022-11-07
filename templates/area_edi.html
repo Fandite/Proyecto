@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="../static/css/area.css">
+
+<div class="row row-area">
+    <div class="col">
+        <h1 class="titulo">Modificar Area</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <form action="/upt_area/{{area.0}}" method="POST">
+        <div class="mb-3">
+            <label for="area" class="form-label">Edita el area</label>
+            <input type="text" class="form-control InA" id="area" name="area" value="{{area.1}}">
+          </div>
+          <button type="submit" class="btn btnA">Modificar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

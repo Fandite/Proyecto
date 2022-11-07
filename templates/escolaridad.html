@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="../static/css/area.css">
+
+<div class="row">
+    <div class="col">
+        <h1 class="titulo escoC">Escolaridad</h1>
+    </div>
+</div>
+<div class="row Rtab">
+    <div class="col">
+        <center>
+            <table class="table">
+                <thead>
+                    <tr class="Ecab">
+                        <th scope="col">#</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col" colspan="2"><center><a href="/escolaridad_agr" class="btn btnE">Agregar nueva escolaridad</a></center></th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in escos %}
+                    <tr class="escoC">
+                        <th scope="row" class="Ops">{{i.0}}</th>
+                        <td class="Ops">{{i.1}}</td>
+                        <td class="Ops"><center><a href="/escolaridad_edi/{{i.0}}" class="btn btnE">Editar</a></center></td>
+                        <td class="Ops"><center><a href="/escolaridad_bor/{{i.0}}" class="btn btnE">Borrar</a></center></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </center>
+    </div>
+</div>
+{% endblock %}
