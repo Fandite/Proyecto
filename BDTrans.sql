@@ -94,7 +94,15 @@ alter table `proy`.`puesto`
 create table puesto_has_habilidades(
   `idPuesto` int(11),
   `idHabili` int(11), 
-  primary key (`idPuesto`, `idHabili`)
+  primary key (`idPuesto`, `idHabili`),
+  KEY `idHabili` (`idHabili`),
+  KEY `idPuesto` (`idPuesto`),
+  constraint `Hab_Has_Rel` 
+  foreign key (`idHabili`) 
+  references `Habilidades`(`idHabili`), 
+  constraint `Puesto_Has_Rel` 
+  foreign key (`idPuesto`) 
+  references `Puesto`(`idPuesto`)
 );
 
 ALTER TABLE `puesto_has_habilidades`
@@ -137,9 +145,9 @@ create table requisicion(
   KEY (`idPuesto`),
   constraint `Llave_Req_Area` 
   foreign key (`idArea`)
-  references `proy`.`area`(`idArea`),
+  references `area`(`idArea`),
   constraint `Llave_Req_Pue` 
   foreign key (`idPuesto`)
-  references `proy`.`puesto`(`idPuesto`)
+  references `puesto`(`idPuesto`)
 );
-
+insert into requisicion(idReq, Folio, FechaElab, FechaRec, FechaIni, MotivoReq, MotivoEspe, TipoVac, NomSol, NomAutoriza, NomRev, Autorizar, idPuesto, idArea) values(1, "VDC5565", "2005/12/25", "2000/05/14", "2022/10/31", "Baja", "", "Temporal", "Andrei Torres Sánchez", "", "", 0, 1, 1), (2, "VDC5565", '2004/09/21', '2016/11/19', '2023/12/25', "Incapacidad", "", "Permanente", "Elvia Yuridia Flores Dueñas", "", "", 0, 1, 2), (3, "VDC5565", '2005/12/25', '2000/05/14', '2022/10/31', "Baja", "", "Temporal", "Jose Juan Aguilar Macías", "Jared Rodríguez de la cruz", "Luis Antonio Aguiña Esparza", 1, 1, 1), (4, "VDC5565", '2004/09/21', '2016/11/19', '2023/12/25', "Incapacidad", "", "Permanente", "Raúl Sebastián Martínez Picazzo", "Janely Anayenzi García Quiroz", "Hilda Lucia Rodriguez Gomez", 1, 1, 2);

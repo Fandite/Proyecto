@@ -19,7 +19,7 @@ def SiAct():
 
 @app.route("/area")
 def area():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="host="Fandite.mysql.pythonanywhere-services.com"", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from area")
     reg = cursor.fetchall()
@@ -34,7 +34,7 @@ def area_agr():
 def inser_are():
     if request.method == "POST":
         area = request.form["area"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("select max(idArea) from area")
         Dat = cursor.fetchall()
@@ -47,7 +47,7 @@ def inser_are():
 
 @app.route("/area_edi/<string:idArea>")
 def area_edi(idArea):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from area where idArea = %s", (idArea))
     reg = cursor.fetchall()
@@ -57,7 +57,7 @@ def area_edi(idArea):
 def upt_are(idArea):
     if request.method == "POST":
         area = request.form["area"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("update area set descrp = %s where idArea=%s", (area, idArea))
         conn.commit()
@@ -65,7 +65,7 @@ def upt_are(idArea):
 
 @app.route("/area_bor/<string:idArea>")
 def area_bor(idArea):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("delete from area where idArea=%s", (idArea))
     conn.commit()
@@ -75,7 +75,7 @@ def area_bor(idArea):
 
 @app.route("/carrera")
 def carrera():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from carrera")
     reg = cursor.fetchall()
@@ -89,7 +89,7 @@ def carrera_agr():
 def inser_carrera():
     if request.method == "POST":
         carrera = request.form["carrera"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("insert into carrera(descrp) values (%s)", (carrera))
         conn.commit()
@@ -97,7 +97,7 @@ def inser_carrera():
 
 @app.route("/carrera_edi/<string:idCarrera>")
 def carrera_edi(idCarrera):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from carrera where idCarrera = %s", (idCarrera))
     reg = cursor.fetchall()
@@ -107,7 +107,7 @@ def carrera_edi(idCarrera):
 def upt_Carrera(idCarrera):
     if request.method == "POST":
         carrera = request.form["carrera"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("update carrera set descrp = %s where idCarrera=%s", (carrera, idCarrera))
         conn.commit()
@@ -115,7 +115,7 @@ def upt_Carrera(idCarrera):
 
 @app.route("/carrera_bor/<string:idCarrera>")
 def carrera_bor(idCarrera):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("delete from carrera where idCarrera=%s", (idCarrera))
     conn.commit()
@@ -125,7 +125,7 @@ def carrera_bor(idCarrera):
 
 @app.route("/escolaridad")
 def escolaridad():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from escolaridad")
     reg = cursor.fetchall()
@@ -139,7 +139,7 @@ def escolaridad_agr():
 def inser_escol():
     if request.method == "POST":
         escolaridad = request.form["esco"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("insert into escolaridad(descrp) values (%s)", (escolaridad))
         conn.commit()
@@ -147,7 +147,7 @@ def inser_escol():
 
 @app.route("/escolaridad_edi/<string:idEscolaridad>")
 def escolaridad_edi(idEscolaridad):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from escolaridad where idEscolaridad = %s", (idEscolaridad))
     reg = cursor.fetchall()
@@ -157,7 +157,7 @@ def escolaridad_edi(idEscolaridad):
 def upt_escolaridad(idEscolaridad):
     if request.method == "POST":
         escolaridad = request.form["esco"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("update escolaridad set descrp = %s where idEscolaridad=%s", (escolaridad, idEscolaridad))
         conn.commit()
@@ -165,7 +165,7 @@ def upt_escolaridad(idEscolaridad):
 
 @app.route("/escolaridad_bor/<string:idEscolaridad>")
 def escolaridad_bor(idEscolaridad):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("delete from escolaridad where idEscolaridad=%s", (idEscolaridad))
     conn.commit()
@@ -175,7 +175,7 @@ def escolaridad_bor(idEscolaridad):
 
 @app.route("/estadoci")
 def estadoci():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from EstadoCiv")
     reg = cursor.fetchall()
@@ -189,7 +189,7 @@ def estadoci_agr():
 def inser_est():
     if request.method == "POST":
         est = request.form["est"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("insert into EstadoCiv(descrp) values (%s)", (est))
         conn.commit()
@@ -197,7 +197,7 @@ def inser_est():
 
 @app.route("/estadoci_edi/<string:idEstadoC>")
 def estadoci_edi(idEstadoC):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from EstadoCiv where idEstadoCiv = %s", (idEstadoC))
     reg = cursor.fetchall()
@@ -207,7 +207,7 @@ def estadoci_edi(idEstadoC):
 def upt_est(idEstadoC):
     if request.method == "POST":
         est = request.form["est"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("update EstadoCiv set descrp = %s where idEstadoCiv=%s", (est, idEstadoC))
         conn.commit()
@@ -215,7 +215,7 @@ def upt_est(idEstadoC):
 
 @app.route("/estadoci_bor/<string:idEstadoC>")
 def estadoci_bor(idEstadoC):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("delete from EstadoCiv where idEstadoCiv=%s", (idEstadoC))
     conn.commit()
@@ -225,7 +225,7 @@ def estadoci_bor(idEstadoC):
 
 @app.route("/grado")
 def grado():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from GradoAv")
     reg = cursor.fetchall()
@@ -239,7 +239,7 @@ def grado_agr():
 def inser_grado():
     if request.method == "POST":
         grado = request.form["grado"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("insert into GradoAv(descrp) values (%s)", (grado))
         conn.commit()
@@ -247,7 +247,7 @@ def inser_grado():
 
 @app.route("/grado_edi/<string:idGra>")
 def grado_edi(idGra):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from GradoAv where idGradoAv = %s", (idGra))
     reg = cursor.fetchall()
@@ -257,7 +257,7 @@ def grado_edi(idGra):
 def upt_grado(idGra):
     if request.method == "POST":
         grado = request.form["grado"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("update GradoAv set descrp = %s where idGradoAv=%s", (grado, idGra))
         conn.commit()
@@ -265,7 +265,7 @@ def upt_grado(idGra):
 
 @app.route("/grado_bor/<string:idGra>")
 def grado_bor(idGra):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("delete from GradoAv where idGradoAv=%s", (idGra))
     conn.commit()
@@ -275,7 +275,7 @@ def grado_bor(idGra):
 
 @app.route("/hab")
 def hab():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from Habilidades")
     reg = cursor.fetchall()
@@ -289,7 +289,7 @@ def hab_agr():
 def inser_hab():
     if request.method == "POST":
         hab = request.form["hab"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("insert into Habilidades(descrp) values (%s)", (hab))
         conn.commit()
@@ -297,7 +297,7 @@ def inser_hab():
 
 @app.route("/hab_edi/<string:idHab>")
 def hab_edi(idHab):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from Habilidades where idHabili = %s", (idHab))
     reg = cursor.fetchall()
@@ -307,7 +307,7 @@ def hab_edi(idHab):
 def upt_hab(idHab):
     if request.method == "POST":
         hab = request.form["hab"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("update Habilidades set descrp = %s where idHabili=%s", (hab, idHab))
         conn.commit()
@@ -315,7 +315,7 @@ def upt_hab(idHab):
 
 @app.route("/hab_bor/<string:idHab>")
 def hab_bor(idHab):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("delete from Habilidades where idHabili=%s", (idHab))
     conn.commit()
@@ -325,7 +325,7 @@ def hab_bor(idHab):
 
 @app.route("/idioma")
 def idioma():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from Idioma")
     reg = cursor.fetchall()
@@ -339,7 +339,7 @@ def idioma_agr():
 def inser_idi():
     if request.method == "POST":
         idi = request.form["idi"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("insert into Idioma(descrp) values (%s)", (idi))
         conn.commit()
@@ -347,7 +347,7 @@ def inser_idi():
 
 @app.route("/idioma_edi/<string:idIdi>")
 def idioma_edi(idIdi):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from Idioma where idIdioma = %s", (idIdi))
     reg = cursor.fetchall()
@@ -357,7 +357,7 @@ def idioma_edi(idIdi):
 def upt_idi(idIdi):
     if request.method == "POST":
         idi = request.form["idi"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("update Idioma set descrp = %s where idIdioma=%s", (idi, idIdi))
         conn.commit()
@@ -365,7 +365,7 @@ def upt_idi(idIdi):
 
 @app.route("/idioma_bor/<string:idIdi>")
 def idioma_bor(idIdi):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("delete from Idioma where idIdioma=%s", (idIdi))
     conn.commit()
@@ -375,7 +375,7 @@ def idioma_bor(idIdi):
 
 @app.route("/med")
 def med():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from MedioPub")
     reg = cursor.fetchall()
@@ -389,7 +389,7 @@ def med_agr():
 def inser_med():
     if request.method == "POST":
         med = request.form["medio"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("insert into MedioPub(descrp) values (%s)", (med))
         conn.commit()
@@ -397,7 +397,7 @@ def inser_med():
 
 @app.route("/med_edi/<string:idMed>")
 def med_edi(idMed):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from MedioPub where idMedioPub = %s", (idMed))
     reg = cursor.fetchall()
@@ -407,7 +407,7 @@ def med_edi(idMed):
 def upt_med(idMed):
     if request.method == "POST":
         med = request.form["medio"]
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("update MedioPub set descrp = %s where idMedioPub=%s", (med, idMed))
         conn.commit()
@@ -415,7 +415,7 @@ def upt_med(idMed):
 
 @app.route("/med_bor/<string:idMed>")
 def med_bor(idMed):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("delete from MedioPub where idMedioPub=%s", (idMed))
     conn.commit()
@@ -423,7 +423,7 @@ def med_bor(idMed):
 
 @app.route("/puesto")
 def puesto():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select idPuesto, nomPuesto from puesto")
     datos = cursor.fetchall()
@@ -431,7 +431,7 @@ def puesto():
 
 @app.route("/puesto_agr")
 def puesto_agr():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select * from area")
     datosA = cursor.fetchall()
@@ -500,7 +500,7 @@ def puesto_agregar():
             Sex = '1'
 
         
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("insert into puesto(codPuesto, idArea, nomPuesto, puestoJefeSup," 
         "jornada, remunMensual, prestaciones, descripcionGeneral, funciones, edad, sexo, "
@@ -511,7 +511,7 @@ def puesto_agregar():
         idEsco, idGrA, idCar, Exp, Conoc, ManE, ReqF, ReqP, Resp, ConTr))
         conn.commit()
 
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute('select idPuesto, nomPuesto from puesto where idPuesto=(select max(idPuesto) from puesto)')
         dato=cursor.fetchall()
@@ -525,12 +525,12 @@ def puesto_agregar():
         for i in range(1, ni):
             idio = 'idi' + str(i)
             if idio in request.form:
-                conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+                conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
                 cursor = conn.cursor()
                 cursor.execute("insert into puesto_has_idiomas(idPuesto, idIdioma) values (%s, %s)", (idP, i))
                 conn.commit()
 
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute('select idPuesto, nomPuesto from puesto where idPuesto=(select max(idPuesto) from puesto)')
         dato=cursor.fetchall()
@@ -544,7 +544,7 @@ def puesto_agregar():
         for i in range(1, habs):
             hab = 'h' + str(i)
             if hab in request.form:
-                conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+                conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
                 cursor = conn.cursor()
                 cursor.execute("insert into puesto_has_habilidades(idPuesto, idHabili) values (%s, %s)", (idP, i))
                 conn.commit()
@@ -556,7 +556,7 @@ def puesto_agregar():
 
 @app.route("/puesto_edi/<string:id>")
 def puesto_edi(id):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute('select * from puesto where idPuesto= %s', (id))
     datos=cursor.fetchall()
@@ -651,7 +651,7 @@ def puesto_editarac(id):
             Sex = '1'
 
         
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("update puesto set codPuesto=%s, idArea=%s, nomPuesto=%s, puestoJefeSup=%s," 
         "jornada=%s, remunMensual=%s, prestaciones=%s, descripcionGeneral=%s, funciones=%s, edad=%s,"
@@ -676,12 +676,12 @@ def puesto_editarac(id):
                     if i == c[0]:
                         B = True
                 if B == False:
-                    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+                    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
                     cursor = conn.cursor()
                     cursor.execute("insert into puesto_has_idiomas(idPuesto, idIdioma) values (%s, %s)", (id, i))
                     conn.commit()
             else:
-                conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+                conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
                 cursor = conn.cursor()
                 cursor.execute("delete from puesto_has_idiomas where idPuesto = %s and idIdioma = %s", (id, i))
                 conn.commit()
@@ -701,12 +701,12 @@ def puesto_editarac(id):
                     if i == c[0]:
                         B = True
                 if B == False:
-                    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+                    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
                     cursor = conn.cursor()
                     cursor.execute("insert into puesto_has_habilidades(idPuesto, idHabili) values (%s, %s)", (id, i))
                     conn.commit()
             else:
-                conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+                conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
                 cursor = conn.cursor()
                 cursor.execute("delete from puesto_has_habilidades where idPuesto = %s and idHabili = %s", (id, i))
                 conn.commit()
@@ -715,7 +715,7 @@ def puesto_editarac(id):
 
 @app.route("/puesto_det/<string:id>", methods=['GET'])
 def puesto_det(id):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute('select * from puesto where idPuesto= %s', (id))
     datos=cursor.fetchall()
@@ -748,7 +748,7 @@ def puesto_det(id):
 
 @app.route("/puesto_bor/<string:id>")
 def puesto_bor(id):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
 
     cursor.execute("delete from puesto_has_idiomas where idPuesto = %s", (id))
@@ -766,7 +766,7 @@ def puesto_bor(id):
 
 @app.route("/requisicion_agr")
 def requisicion_agr():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select idArea, descrp from area")
     Area = cursor.fetchall()
@@ -797,7 +797,7 @@ def requisicion_fagr():
         Motivo = request.form["motReq"]
         MotivoEspe = request.form["motReqEsp"]
          
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
 
         cursor.execute("insert into requisicion(Folio, idArea, FechaElab, idPuesto, NomSol, FechaRec, "
@@ -810,7 +810,7 @@ def requisicion_fagr():
 
 @app.route("/requisicion")
 def requisicion():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select a.idReq, a.Autorizar, a.Folio, b.nomPuesto from requisicion a inner join Puesto b on a.idPuesto = b.idPuesto")
     dat = cursor.fetchall()
@@ -820,7 +820,7 @@ def requisicion():
 
 @app.route("/req_autori/<string:id>")
 def req_autori(id):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select a.idReq, a.folio, b.nomPuesto from requisicion a inner join puesto b on a.idPuesto = b.idPuesto and idReq = %s", (id))
     datos = cursor.fetchall()
@@ -831,7 +831,7 @@ def req_autorizar(id):
     if request.method == "POST":
         Revisado = request.form['Revisado']
         Autorizado = request.form['Autorizado']
-        conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+        conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
         cursor = conn.cursor()
         cursor.execute("update requisicion set NomRev=%s, NomAutoriza=%s, Autorizar=1 where idReq = %s", (Revisado, Autorizado, id))
         conn.commit()
@@ -839,7 +839,7 @@ def req_autorizar(id):
         
 @app.route("/req_det/<string:id>", methods=["GET"])
 def req_det(id):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select Folio, FechaElab, NomSol, FechaRec, FechaIni, TipoVac, MotivoReq, MotivoEspe, Autorizar from requisicion where idReq = %s", (id))
     Req = cursor.fetchall()
@@ -857,7 +857,7 @@ def req_det(id):
 
 @app.route("/req_bor/<string:id>")
 def req_bor(id):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("delete from requisicion where idReq = %s", (id))
     return redirect(url_for("requisicion"))
@@ -866,7 +866,7 @@ def req_bor(id):
 
 @app.route("/req_autorizadas")
 def req_autorizadas():
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select a.idReq, a.Autorizar, a.Folio, b.nomPuesto from requisicion a inner join Puesto b on a.idPuesto = b.idPuesto")
     datos = cursor.fetchall()
@@ -874,7 +874,7 @@ def req_autorizadas():
 
 @app.route("/autori_det/<string:id>")
 def autori_det(id):
-    conn = pymysql.connect(host="localhost", user="root", passwd="", db="Proy")
+    conn = pymysql.connect(host="Fandite.mysql.pythonanywhere-services.com", user="Fandite", passwd="Fandatos18", db="Fandite$default")
     cursor = conn.cursor()
     cursor.execute("select a.idReq, a.Autorizar, a.Folio, b.nomPuesto from requisicion a inner join Puesto b on a.idPuesto = b.idPuesto")
     datos = cursor.fetchall()
