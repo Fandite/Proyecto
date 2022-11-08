@@ -8,24 +8,24 @@
 <form class="row g-3" action="/req_autori/" method="get">
     <div class="col-md-3">
         <label for="Folio" class="form-label">Folio</label>
-        <input type="text" class="form-control InR" name="Folio" id="Folio" value="{{D.1}}" readonly="readonly"></input>
+        <input type="text" class="form-control InPen" name="Folio" id="Folio" value="{{D.1}}" readonly="readonly"></input>
     </div>
     <div class="col-md-9">
         <label for="idPuesto" class="form-label">Puesto vacante</label>
-        <input type="text" class="form-control InR" name="idPuesto" id="idPuesto" value="{{D.2}}" readonly="readonly"></input>
+        <input type="text" class="form-control InPen" name="idPuesto" id="idPuesto" value="{{D.2}}" readonly="readonly"></input>
     </div><div class="col-md-12">
 </form>
 <form class="row g-3" id="Form2" action="/req_autorizar/{{D.0}}" method="post">
     <div class="col-md-12">
         <label for="Revisado" class="form-label">Revisado por:</label>
-        <input type="text" class="form-control InR" name="Revisado" id="Revisado" required></input>
+        <input type="text" class="form-control InPen" name="Revisado" id="Revisado" required></input>
     </div>
     <div class="col-md-12">
         <label for="Autorizado" class="form-label">Autorizado por:</label>
-        <input type="text" class="form-control InR" name="Autorizado" id="Autorizado" required></input>
+        <input type="text" class="form-control InPen" name="Autorizado" id="Autorizado" required></input>
     </div>
     <div class="col-md-4">
-        <button type="submit" class="btn btnR">Enviar Autorizacion</button>
+        <button type="submit" class="btn btnPen">Enviar Autorizacion</button>
     </div>
 </form>
 <br>

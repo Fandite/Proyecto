@@ -300,13 +300,120 @@ body{
     text-shadow: 0 0 30px #F5F5F5;
     box-shadow: 0 0 20px #d5d5d5;
 }
-.RPcab{
+.btnR{
+    background-color: #7d7503;
+    border-color: #7d7503;
+    color: #FFF;
+}
+.btnR:hover{
+    background-color: #EEDF23;
+    border-color: #EEDF23;
+    color: #000;
+}
+.btnR:active{
+    background-color: #EEDF23;
+    border-color: #EEDF23;
+}
+.InR{
+    border-color: #202020;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InR:focus{
+    border-color: #202020;
+    text-shadow: 0 0 30px #7d7503;
+    box-shadow: 0 0 20px #EEDF23;
+    background-color: white;
+}
+.InR:disabled{
+    border-color: #202020;
+    background-color: rgba(255, 255, 255, 0.211);
+    font-weight: 500;
+}
+.InRCh{
+    border-radius: 100% 100%;
+    border-color: #202020;
+    background-color: rgba(255, 255, 255, 0.541);
+}
+.InRCh:checked{
+    border-color: #202020;
+    border-radius: 100%;
+    background: url("/static/img/Verificado2.png");
+    text-shadow: 0 0 7px #F5F5F5;
+    box-shadow: 0 0 5px #d5d5d5;
+}
+.InRCh:focus{
+    border-color: #202020;
+    text-shadow: 0 0 30px #F5F5F5;
+    box-shadow: 0 0 20px #d5d5d5;
+}
+.RPencab{
     background-color: #FF0000;
     vertical-align: middle;
     border-radius: 20px;
 }
-.RAcab{
-    background-color: #0068FF;
+.btnPen{
+    background-color: #8B0202;
+    border-color: #8B0202;
+    color: #FFF;
+}
+.btnPen:hover{
+    background-color: #DC3C3C;
+    border-color: #DC3C3C;
+    color: #FFF;
+}
+.btnPen:active{
+    background-color: #DC3C3C;
+    border-color: #DC3C3C;
+}
+.InPen{
+    border-color: #202020;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InPen:focus{
+    border-color: #202020;
+    text-shadow: 0 0 30px #8B0202;
+    box-shadow: 0 0 20px #DC3C3C;
+    background-color: white;
+}
+.InPen:disabled{
+    border-color: #202020;
+    background-color: rgba(255, 255, 255, 0.211);
+    font-weight: 500;
+}
+.RAutcab{
+    background-color: #04439E;
     vertical-align: middle;
     border-radius: 20px;
+}
+.btnAut{
+    background-color: #73A7F3;
+    border-color: #73A7F3;
+    color: #FFF;
+}
+.btnAut:hover{
+    background-color: #104FAB;
+    border-color: #104FAB;
+    color: #FFF;
+}
+.btnAut:active{
+    background-color: #DC3C3C;
+    border-color: #DC3C3C;
+}
+.InAut{
+    border-color: #202020;
+    background-color: rgba(255, 255, 255, 0.541);
+    font-weight: 500;
+}
+.InAut:focus{
+    border-color: #202020;
+    text-shadow: 0 0 30px #73A7F3;
+    box-shadow: 0 0 20px #104FAB;
+    background-color: white;
+}
+.InAut:disabled{
+    border-color: #202020;
+    background-color: rgba(255, 255, 255, 0.211);
+    font-weight: 500;
 }

@@ -142,3 +142,4 @@ create table requisicion(
   foreign key (`idPuesto`)
   references `proy`.`puesto`(`idPuesto`)
 );
+
